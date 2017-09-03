@@ -1,0 +1,30 @@
+package:
+  name: salt
+  version: 2017.7.2
+
+source:
+  git_tag: v2017.7.2
+  git_url: https://github.com/saltstack/salt.git
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+    - pyyaml
+    - jinja2
+    - tornado
+    - msgpack-python
+    - pycrypto
+    - pyzmq
+
+test:
+  commands:
+    - salt --version
+    - python -V
+
+about:
+  home: http://saltstack.com
